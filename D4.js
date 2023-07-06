@@ -40,17 +40,27 @@ console.log(crazySum(2, 2));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function crazyDiff(n3) {
+// function crazyDiff(n3) {
+//   let diff = 0;
+//   if (n3 > 19) {
+//     diff = (n3 - 19) * 3;
+//   } else {
+//     diff = n3 - 19;
+//   }
+//   return diff;
+// }
+// console.log(crazyDiff(30));
+function crazyDiff(a) {
   let diff = 0;
-  if (n3 > 19) {
-    diff = (n3 - 19) * 3;
+  if (a > 19) {
+    diff = Math.abs(a - 19) * 3;
   } else {
-    diff = n3 - 19;
+    diff = Math.abs(a - 19);
   }
+
   return diff;
 }
-console.log(crazyDiff(30));
-
+console.log(crazyDiff(20));
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
@@ -59,9 +69,10 @@ console.log(crazyDiff(30));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function boundary(n) {
   if ((n > 20 && n <= 100) || n === 400) {
-    n = true;
-  } else n = false;
-  return n;
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(boundary(20));
 
@@ -94,11 +105,11 @@ console.log(check3and7(9));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-function reverseString(EPICODE) {
-  const myString = "Fun Fun Function";
-  EPICODE = myString.split("");
+function reverseString(str) {
+  return str.split("").reverse("").join("");
 }
-console.log(reverseString(EPICODE));
+
+console.log(reverseString("tu madre"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
